@@ -5,6 +5,7 @@ provider "aws" {
 resource "aws_cloudformation_stack" "cloud_migration_factory" {
   name         = "CloudMigrationFactory"
   template_url = "https://testingcloudformation.s3.ap-south-1.amazonaws.com/cmf.yaml.yaml"
+# template_body = file("${path.module}/cloudformation/file1.yaml")
 
   capabilities = ["CAPABILITY_NAMED_IAM", "CAPABILITY_AUTO_EXPAND"]
 
